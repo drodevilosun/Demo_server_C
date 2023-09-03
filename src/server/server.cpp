@@ -122,7 +122,7 @@ void Server::HandleRequest(int client_socket) {
     // logger.log(buffer);
 
     // Send a response back to the client
-    std::string response = "HTTP/1.1 200 OK\r\nContent-Length: 13\r\nContent-Type: text/plain\r\nAccess-Control-Allow-Origin: *\r\n\r\n";
+    std::string response = "HTTP/1.1 200 OK\r\nContent-Length: 1\r\nContent-Type: text/plain\r\nAccess-Control-Allow-Origin: *\r\n\r\nX";
     send(client_socket, response.c_str(), response.length(), 0);
 
     close(client_socket);
